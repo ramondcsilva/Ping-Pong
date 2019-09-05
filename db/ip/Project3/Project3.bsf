@@ -1,0 +1,146 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 336 408)
+	(text "Project3" (rect 144 -1 175 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 392 20 404)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 144 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "potenciometro1_export[7..0]" (rect 0 0 109 12)(font "Arial" (font_size 8)))
+		(text "potenciometro1_export[7..0]" (rect 4 101 166 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 144 112)(line_width 3))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "potenciometro2_export[7..0]" (rect 0 0 110 12)(font "Arial" (font_size 8)))
+		(text "potenciometro2_export[7..0]" (rect 4 141 166 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 144 152)(line_width 3))
+	)
+	(port
+		(pt 0 296)
+		(input)
+		(text "ponto1_export[3..0]" (rect 0 0 75 12)(font "Arial" (font_size 8)))
+		(text "ponto1_export[3..0]" (rect 4 285 118 296)(font "Arial" (font_size 8)))
+		(line (pt 0 296)(pt 144 296)(line_width 3))
+	)
+	(port
+		(pt 0 336)
+		(input)
+		(text "ponto2_export[3..0]" (rect 0 0 76 12)(font "Arial" (font_size 8)))
+		(text "ponto2_export[3..0]" (rect 4 325 118 336)(font "Arial" (font_size 8)))
+		(line (pt 0 336)(pt 144 336)(line_width 3))
+	)
+	(port
+		(pt 0 376)
+		(input)
+		(text "rstgame_export" (rect 0 0 63 12)(font "Arial" (font_size 8)))
+		(text "rstgame_export" (rect 4 365 88 376)(font "Arial" (font_size 8)))
+		(line (pt 0 376)(pt 144 376)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(output)
+		(text "lcd_rw" (rect 0 0 25 12)(font "Arial" (font_size 8)))
+		(text "lcd_rw" (rect 4 181 40 192)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 144 192)(line_width 1))
+	)
+	(port
+		(pt 0 208)
+		(output)
+		(text "lcd_rs" (rect 0 0 24 12)(font "Arial" (font_size 8)))
+		(text "lcd_rs" (rect 4 197 40 208)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 144 208)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(output)
+		(text "lcd_en" (rect 0 0 25 12)(font "Arial" (font_size 8)))
+		(text "lcd_en" (rect 4 213 40 224)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 144 224)(line_width 1))
+	)
+	(port
+		(pt 0 240)
+		(output)
+		(text "lcd_bl" (rect 0 0 22 12)(font "Arial" (font_size 8)))
+		(text "lcd_bl" (rect 4 229 40 240)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 144 240)(line_width 1))
+	)
+	(port
+		(pt 0 256)
+		(output)
+		(text "lcd_db[7..0]" (rect 0 0 46 12)(font "Arial" (font_size 8)))
+		(text "lcd_db[7..0]" (rect 4 245 76 256)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 144 256)(line_width 3))
+	)
+	(drawing
+		(text "clk" (rect 129 43 276 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 149 67 316 144)(font "Arial" (color 0 0 0)))
+		(text "potenciometro1" (rect 58 83 200 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 149 107 334 224)(font "Arial" (color 0 0 0)))
+		(text "potenciometro2" (rect 56 123 196 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 149 147 334 304)(font "Arial" (color 0 0 0)))
+		(text "lcd" (rect 129 163 276 339)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "rw" (rect 149 187 310 384)(font "Arial" (color 0 0 0)))
+		(text "rs" (rect 149 203 310 416)(font "Arial" (color 0 0 0)))
+		(text "en" (rect 149 219 310 448)(font "Arial" (color 0 0 0)))
+		(text "bl" (rect 149 235 310 480)(font "Arial" (color 0 0 0)))
+		(text "db" (rect 149 251 310 512)(font "Arial" (color 0 0 0)))
+		(text "ponto1" (rect 108 267 252 547)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 149 291 334 592)(font "Arial" (color 0 0 0)))
+		(text "ponto2" (rect 106 307 248 627)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 149 331 334 672)(font "Arial" (color 0 0 0)))
+		(text "rstgame" (rect 97 347 236 707)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 149 371 334 752)(font "Arial" (color 0 0 0)))
+		(text " Project3 " (rect 298 392 656 794)(font "Arial" ))
+		(line (pt 145 52)(pt 145 76)(line_width 1))
+		(line (pt 146 52)(pt 146 76)(line_width 1))
+		(line (pt 145 92)(pt 145 116)(line_width 1))
+		(line (pt 146 92)(pt 146 116)(line_width 1))
+		(line (pt 145 132)(pt 145 156)(line_width 1))
+		(line (pt 146 132)(pt 146 156)(line_width 1))
+		(line (pt 145 172)(pt 145 260)(line_width 1))
+		(line (pt 146 172)(pt 146 260)(line_width 1))
+		(line (pt 145 276)(pt 145 300)(line_width 1))
+		(line (pt 146 276)(pt 146 300)(line_width 1))
+		(line (pt 145 316)(pt 145 340)(line_width 1))
+		(line (pt 146 316)(pt 146 340)(line_width 1))
+		(line (pt 145 356)(pt 145 380)(line_width 1))
+		(line (pt 146 356)(pt 146 380)(line_width 1))
+		(line (pt 144 32)(pt 192 32)(line_width 1))
+		(line (pt 192 32)(pt 192 392)(line_width 1))
+		(line (pt 144 392)(pt 192 392)(line_width 1))
+		(line (pt 144 32)(pt 144 392)(line_width 1))
+		(line (pt 0 0)(pt 336 0)(line_width 1))
+		(line (pt 336 0)(pt 336 408)(line_width 1))
+		(line (pt 0 408)(pt 336 408)(line_width 1))
+		(line (pt 0 0)(pt 0 408)(line_width 1))
+	)
+)

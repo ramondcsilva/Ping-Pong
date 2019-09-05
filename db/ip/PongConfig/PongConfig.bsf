@@ -1,0 +1,135 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 288 368)
+	(text "PongConfig" (rect 111 -1 157 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 352 20 364)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "buttomreset_export" (rect 0 0 77 12)(font "Arial" (font_size 8)))
+		(text "buttomreset_export" (rect 4 61 112 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 112 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 101 46 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 112 112)(line_width 1))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "ponto1_export[3..0]" (rect 0 0 75 12)(font "Arial" (font_size 8)))
+		(text "ponto1_export[3..0]" (rect 4 245 118 256)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 112 256)(line_width 3))
+	)
+	(port
+		(pt 0 296)
+		(input)
+		(text "ponto2_export[3..0]" (rect 0 0 76 12)(font "Arial" (font_size 8)))
+		(text "ponto2_export[3..0]" (rect 4 285 118 296)(font "Arial" (font_size 8)))
+		(line (pt 0 296)(pt 112 296)(line_width 3))
+	)
+	(port
+		(pt 0 336)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 325 82 336)(font "Arial" (font_size 8)))
+		(line (pt 0 336)(pt 112 336)(line_width 1))
+	)
+	(port
+		(pt 0 152)
+		(output)
+		(text "lcd_rw" (rect 0 0 25 12)(font "Arial" (font_size 8)))
+		(text "lcd_rw" (rect 4 141 40 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 112 152)(line_width 1))
+	)
+	(port
+		(pt 0 168)
+		(output)
+		(text "lcd_rs" (rect 0 0 24 12)(font "Arial" (font_size 8)))
+		(text "lcd_rs" (rect 4 157 40 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 112 168)(line_width 1))
+	)
+	(port
+		(pt 0 184)
+		(output)
+		(text "lcd_en" (rect 0 0 25 12)(font "Arial" (font_size 8)))
+		(text "lcd_en" (rect 4 173 40 184)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 112 184)(line_width 1))
+	)
+	(port
+		(pt 0 200)
+		(output)
+		(text "lcd_bl" (rect 0 0 22 12)(font "Arial" (font_size 8)))
+		(text "lcd_bl" (rect 4 189 40 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 112 200)(line_width 1))
+	)
+	(port
+		(pt 0 216)
+		(output)
+		(text "lcd_db[7..0]" (rect 0 0 46 12)(font "Arial" (font_size 8)))
+		(text "lcd_db[7..0]" (rect 4 205 76 216)(font "Arial" (font_size 8)))
+		(line (pt 0 216)(pt 112 216)(line_width 3))
+	)
+	(drawing
+		(text "buttomreset" (rect 43 43 152 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 117 67 270 144)(font "Arial" (color 0 0 0)))
+		(text "clk" (rect 97 83 212 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 117 107 252 224)(font "Arial" (color 0 0 0)))
+		(text "lcd" (rect 97 123 212 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "rw" (rect 117 147 246 304)(font "Arial" (color 0 0 0)))
+		(text "rs" (rect 117 163 246 336)(font "Arial" (color 0 0 0)))
+		(text "en" (rect 117 179 246 368)(font "Arial" (color 0 0 0)))
+		(text "bl" (rect 117 195 246 400)(font "Arial" (color 0 0 0)))
+		(text "db" (rect 117 211 246 432)(font "Arial" (color 0 0 0)))
+		(text "ponto1" (rect 76 227 188 467)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 117 251 270 512)(font "Arial" (color 0 0 0)))
+		(text "ponto2" (rect 74 267 184 547)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 117 291 270 592)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 83 307 196 627)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 117 331 276 672)(font "Arial" (color 0 0 0)))
+		(text " PongConfig " (rect 236 352 544 714)(font "Arial" ))
+		(line (pt 113 52)(pt 113 76)(line_width 1))
+		(line (pt 114 52)(pt 114 76)(line_width 1))
+		(line (pt 113 92)(pt 113 116)(line_width 1))
+		(line (pt 114 92)(pt 114 116)(line_width 1))
+		(line (pt 113 132)(pt 113 220)(line_width 1))
+		(line (pt 114 132)(pt 114 220)(line_width 1))
+		(line (pt 113 236)(pt 113 260)(line_width 1))
+		(line (pt 114 236)(pt 114 260)(line_width 1))
+		(line (pt 113 276)(pt 113 300)(line_width 1))
+		(line (pt 114 276)(pt 114 300)(line_width 1))
+		(line (pt 113 316)(pt 113 340)(line_width 1))
+		(line (pt 114 316)(pt 114 340)(line_width 1))
+		(line (pt 112 32)(pt 176 32)(line_width 1))
+		(line (pt 176 32)(pt 176 352)(line_width 1))
+		(line (pt 112 352)(pt 176 352)(line_width 1))
+		(line (pt 112 32)(pt 112 352)(line_width 1))
+		(line (pt 0 0)(pt 288 0)(line_width 1))
+		(line (pt 288 0)(pt 288 368)(line_width 1))
+		(line (pt 0 368)(pt 288 368)(line_width 1))
+		(line (pt 0 0)(pt 0 368)(line_width 1))
+	)
+)

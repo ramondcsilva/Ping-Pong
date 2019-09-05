@@ -1,0 +1,166 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 13:57:14  August 08, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Project3_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE30F23C7
+set_global_assignment -name TOP_LEVEL_ENTITY Pong
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:57:14  AUGUST 08, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_AB18 -to ADC_CNVST
+set_location_assignment PIN_AA17 -to ADC_CS_N
+set_location_assignment PIN_AA19 -to ADC_OUT[1]
+set_location_assignment PIN_AB19 -to ADC_OUT[0]
+set_location_assignment PIN_AB17 -to ADC_REFSEL
+set_location_assignment PIN_AA18 -to ADC_SCLK
+set_location_assignment PIN_AA16 -to ADC_SD
+set_location_assignment PIN_AB16 -to ADC_SEL
+set_location_assignment PIN_AB20 -to ADC_UB
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to ADC_OUT[0] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to ADC_OUT[1] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to ADC_OUT[0] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to ADC_OUT[1] -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=1024" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=1024" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=2" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=24" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000001100011101111111" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_PIN_TO_SLD_NODE_ENTITY_PORT acq_clk -to auto_stp_external_clock_0 -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "ADMAX1379:conversor|ADC_CNVST" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "ADMAX1379:conversor|ADC_SCLK" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "ADMAX1379:conversor|ADC_CNVST" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "ADMAX1379:conversor|ADC_SCLK" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=4" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=4" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=33156" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=25909" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_Project3_auto_signaltap_0_1_8d41,sld_reserved_Project3_auto_signaltap_0_2_8d41," -section_id auto_signaltap_0
+set_global_assignment -name VERILOG_FILE Velocidade9.v
+set_global_assignment -name VERILOG_FILE Velocidade8.v
+set_global_assignment -name VERILOG_FILE Velocidade7.v
+set_global_assignment -name VERILOG_FILE Velocidade6.v
+set_global_assignment -name VERILOG_FILE Velocidade5.v
+set_global_assignment -name VERILOG_FILE Velocidade4.v
+set_global_assignment -name VERILOG_FILE Velocidade3.v
+set_global_assignment -name VERILOG_FILE Velocidade2.v
+set_global_assignment -name VERILOG_FILE Velocidade15.v
+set_global_assignment -name VERILOG_FILE Velocidade14.v
+set_global_assignment -name VERILOG_FILE Velocidade13.v
+set_global_assignment -name VERILOG_FILE Velocidade12.v
+set_global_assignment -name VERILOG_FILE Velocidade11.v
+set_global_assignment -name VERILOG_FILE Velocidade10.v
+set_global_assignment -name VERILOG_FILE Velocidade1.v
+set_global_assignment -name VERILOG_FILE palete.v
+set_global_assignment -name VERILOG_FILE MUX15Entradas.v
+set_global_assignment -name BDF_FILE Pong.bdf
+set_global_assignment -name BDF_FILE MiniDebounce.bdf
+set_global_assignment -name BDF_FILE Debounce2.bdf
+set_global_assignment -name VERILOG_FILE VGA2.v
+set_global_assignment -name VERILOG_FILE Teste.v
+set_global_assignment -name VERILOG_FILE PaletasLimites.v
+set_global_assignment -name VERILOG_FILE lfsr_N_1.v
+set_global_assignment -name VERILOG_FILE lcd_controller.v
+set_global_assignment -name VERILOG_FILE Divisor2.v
+set_global_assignment -name VERILOG_FILE delay.v
+set_global_assignment -name VERILOG_FILE debounce.v
+set_global_assignment -name VERILOG_FILE ContadorRegressivoProgressivo2.v
+set_global_assignment -name VERILOG_FILE ContadorRegressivoProgressivo.v
+set_global_assignment -name VERILOG_FILE contador.v
+set_global_assignment -name VERILOG_FILE constanteDados.v
+set_global_assignment -name VERILOG_FILE AD.v
+set_global_assignment -name QIP_FILE Project3/synthesis/Project3.qip
+set_global_assignment -name VERILOG_FILE ADMAX1379.v
+set_global_assignment -name VERILOG_FILE Main.v
+set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name VERILOG_FILE db/ip/Project3/Project_3.v
+set_location_assignment PIN_T2 -to Clock
+set_location_assignment PIN_Y3 -to db[7]
+set_location_assignment PIN_V3 -to db[6]
+set_location_assignment PIN_Y4 -to db[5]
+set_location_assignment PIN_V4 -to db[4]
+set_location_assignment PIN_V5 -to db[3]
+set_location_assignment PIN_V6 -to db[2]
+set_location_assignment PIN_V7 -to db[1]
+set_location_assignment PIN_V8 -to db[0]
+set_location_assignment PIN_V9 -to en
+set_location_assignment PIN_U9 -to rs
+set_location_assignment PIN_U8 -to rw
+set_location_assignment PIN_V10 -to bl
+set_location_assignment PIN_A17 -to vsync
+set_location_assignment PIN_B16 -to hsync
+set_location_assignment PIN_A9 -to R0
+set_location_assignment PIN_C10 -to R1
+set_location_assignment PIN_A10 -to R2
+set_location_assignment PIN_B10 -to R3
+set_location_assignment PIN_C13 -to G0
+set_location_assignment PIN_A13 -to G1
+set_location_assignment PIN_B13 -to G2
+set_location_assignment PIN_A14 -to G3
+set_location_assignment PIN_B14 -to B0
+set_location_assignment PIN_A15 -to B1
+set_location_assignment PIN_B15 -to B2
+set_location_assignment PIN_A16 -to B3
+set_location_assignment PIN_V21 -to Reset
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SLD_FILE "C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/output_files/stp1_auto_stripped.stp"

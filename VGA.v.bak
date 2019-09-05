@@ -1,0 +1,116 @@
+module VGA(
+input clock, // 50 Mhz
+input [3:0] sorteio,
+input [10:0] Hmaximo1,Hminima1,Hmaximo2,Hminima2,
+input [10:0] Vmaximo1,Vminima1,Vmaximo2,Vminima2,
+output reg [3:0] vermelho,
+output reg [3:0] verde,
+output reg [3:0] azul,
+output reg horizontalsincronizacao,
+output reg verticalsincronizacao
+);
+
+reg [9:0] horizontalcontador = 0;
+reg [9:0] verticalcontador = 0;
+reg [1:0] contador = 0;
+reg clockAtivo;//Ativa quando dividiu para 25 MHz
+reg reset=0;
+reg [10:0] palete1YM=95,palete1Ym=5,palete1XM=35,palete1Xm=5;
+reg [10:0] palete2YM=95,palete2Ym=5,palete2XM=635,palete2Xm=605;
+//wire saida[3:0];
+//LSFRRandom M1(.saida1(saida[0]),.saida2(saida[1]),.saida3(saida[2]),.saida4(saida[3]));
+
+//reg feedback= ~(saida[3] ^ saida[2]);
+/*
+
+always @(posedge clock)
+  begin
+    saida <= {saida[2:0],feedback};
+  end
+  */
+always @ (posedge clock)
+begin
+	if(contador==2)
+		begin
+		contador <= 1'b0;
+      clockAtivo <= 1'b1;
+		palete1YM<=Vmaximo1;
+		palete1Ym<=Vminima1;
+		palete1XM<=Hmaximo1;
+		palete1Xm<=Hminima1;
+		end
+	else 
+		begin
+		contador <= contador + 1'b1;
+		clockAtivo <= 1'b0;
+		end
+end
+
+
+//Atualizar linha e coluna
+always @ (posedge clock)
+begin
+	if (clockAtivo == 1)
+		begin
+			if(horizontalcontador==799)//799 se nao funcionar
+				begin
+					horizontalcontador<= 0;					
+					if(verticalcontador == 524)
+						verticalcontador <= 0;
+					else 
+					verticalcontador <= verticalcontador+1'b1;					
+				end
+			else
+				begin
+					horizontalcontador<= horizontalcontador+1'b1;							
+				end		
+		end
+end
+
+
+//Regioes da tela
+always @ (posedge clock)
+begin
+	if (clockAtivo == 1)
+		begin
+			//(0-640,0-480) zona ativa
+			if((horizontalcontador>=palete1Xm && horizontalcontador<=palete1XM && verticalcontador>=palete1Ym && verticalcontador<=palete1YM) || (horizontalcontador>=palete2Xm && horizontalcontador<=palete2XM && verticalcontador>=palete2Ym && verticalcontador<=palete2YM))
+			//if((horizontalcontador>=Hminima1 && horizontalcontador<=Hmaximo1 && verticalcontador>=Vminima1 && verticalcontador<=Vmaximo1) || (horizontalcontador>=Hminima2 && horizontalcontador<=Hmaximo2 && verticalcontador>=Vminima2 && verticalcontador<=Vmaximo2))//0-640 cores regiao ativa
+				begin//Preto
+				verde <= 4'hF;
+				azul <= 4'hF; 
+				vermelho <= 4'hF;				
+				end
+			else if(horizontalcontador>=40 && horizontalcontador<=75 && verticalcontador>=0 && verticalcontador<=35)	
+				begin//Preto
+				verde <= 4'hF;
+				azul <= 4'hF; 
+				vermelho <= 4'hF;				
+				end
+			else
+				begin//Preto
+				verde <= 4'h0;
+				azul <= 4'h0; 
+				vermelho <= 4'h0;				
+				end
+			
+			if(horizontalcontador>=656 && horizontalcontador<752)//Front Porch Horizontal e Vertical ativo
+				begin				
+				horizontalsincronizacao<=0;				
+				end
+			else
+				begin				
+				horizontalsincronizacao<=1;				
+				end
+			
+			if(verticalcontador>=490 && verticalcontador<492)//Front Porch Horizontal e Vertical ativo
+				begin				
+				verticalsincronizacao<=0;
+				end
+			else 
+				begin				
+				verticalsincronizacao<=1;
+				end			
+		end
+end
+endmodule

@@ -1,0 +1,752 @@
+module VGA2(input clock,input [10:0] Paleta1PosicaoMaximaY,input [10:0] Paleta1PosicaoMinimaY,input [10:0] Paleta2PosicaoMaximaY,input [10:0] Paleta2PosicaoMinimaY,output reg R,G,B,hsync,vsync,input [3:0] aleatorio,input ClockBola);
+reg [10:0] horizontalcontador;
+reg [10:0] verticalcontador;
+reg [10:0] BolaPosicaoMaximaY,BolaPosicaoMinimaY,BolaPosicaoMaximaX,BolaPosicaoMinimaX;
+initial horizontalcontador=0;
+initial verticalcontador=0;
+reg [3:0] aleatorioAux;
+reg [3:0] sentido;
+reg colider,posicionar;
+initial posicionar=1;
+reg [3:0] pontoJogador1,pontoJogador2;
+initial pontoJogador1=0;
+initial pontoJogador2=0;
+
+always@(posedge ClockBola)
+begin 
+	if(posicionar)
+	begin
+			
+			posicionar<=0;		
+			if(aleatorio<8)
+			begin
+			BolaPosicaoMaximaY<=270;
+			BolaPosicaoMinimaY<=240;
+			BolaPosicaoMaximaX<=350;
+			BolaPosicaoMinimaX<=320;				
+				if(aleatorio==0)
+				begin
+					sentido<=1;	
+				end
+				else if(aleatorio==1)
+				begin
+					sentido<=2;	
+				end
+				else if(aleatorio==2)
+				begin
+					sentido<=3;	
+				end
+				else if(aleatorio==3)
+				begin
+					sentido<=4;	
+				end
+				else if(aleatorio==4)
+				begin
+					sentido<=5;	
+				end
+				else if(aleatorio==5)
+				begin
+					sentido<=6;	
+				end
+				else if(aleatorio==6)
+				begin
+					sentido<=7;	
+				end
+				else
+				begin
+					sentido<=8;	
+				end
+			end
+			else			
+			begin
+			BolaPosicaoMaximaY<=210;
+			BolaPosicaoMinimaY<=180;
+			BolaPosicaoMaximaX<=460;
+			BolaPosicaoMinimaX<=430;				
+				if(aleatorio==8)
+				begin
+					sentido<=1;	
+				end
+				else if(aleatorio==9)
+				begin
+					sentido<=2;	
+				end
+				else if(aleatorio==10)
+				begin
+					sentido<=3;	
+				end
+				else if(aleatorio==11)
+				begin
+					sentido<=4;	
+				end
+				else if(aleatorio==12)
+				begin
+					sentido<=5;	
+				end
+				else if(aleatorio==13)
+				begin
+					sentido<=6;	
+				end
+				else if(aleatorio==14)
+				begin
+					sentido<=7;	
+				end
+				else
+				begin
+					sentido<=8;	
+				end
+			end
+					
+			
+	end
+	else if(BolaPosicaoMaximaX<=3)//Detect Ponto Jogador 2 
+        begin
+		pontoJogador2<=pontoJogador2+1;
+		posicionar<=1;
+	end
+	else if(BolaPosicaoMinimaX>=637)//Detect Ponto Jogador 1
+        begin
+		pontoJogador1<=pontoJogador1+1;
+		posicionar<=1;
+	end
+	else if(BolaPosicaoMinimaY>=477)//Bug
+        begin
+		posicionar<=1;
+	end
+	else if(BolaPosicaoMaximaY<=3)//Bug
+        begin
+		posicionar<=1;
+	end
+	else if(BolaPosicaoMaximaX>=605 &&  BolaPosicaoMaximaX<615 && BolaPosicaoMaximaY>=Paleta2PosicaoMinimaY &&  BolaPosicaoMinimaY<=5)//Detect Collider Paleta 2 no canto Superior parede Cima
+	begin//5
+		sentido<=5;
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+				if(BolaPosicaoMaximaY+1<480)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY+1;
+				end
+				if(BolaPosicaoMinimaY+1<480)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY+1;
+				end
+	end
+	else if(BolaPosicaoMaximaX>=605 &&  BolaPosicaoMaximaX<615 && BolaPosicaoMaximaY>=475 &&  BolaPosicaoMinimaY>=Paleta2PosicaoMinimaY)//Detect Collider Paleta 2 no canto Inferior parede Baixo
+	begin//7
+		sentido<=7;
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+				if(BolaPosicaoMaximaY-1>0)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY-1;
+				end
+				if(BolaPosicaoMinimaY-1>0)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY-1;
+				end	
+	end
+	else if(BolaPosicaoMaximaX>15 &&  BolaPosicaoMaximaX<=35 && BolaPosicaoMaximaY>=Paleta1PosicaoMinimaY &&  BolaPosicaoMinimaY<=5)//Detect Collider Paleta 1 no canto Superior parede Cima
+	begin//3
+		sentido<=3;
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end
+				if(BolaPosicaoMaximaY+1<480)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY+1;
+				end
+				if(BolaPosicaoMinimaY+1<480)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY+1;
+				end
+	end
+	else if(BolaPosicaoMaximaX>15 &&  BolaPosicaoMaximaX<=35 && BolaPosicaoMaximaY>=475 &&  BolaPosicaoMinimaY>=Paleta1PosicaoMinimaY)//Detect Collider Paleta 1 no canto Inferior parede Baixo
+	begin//1
+		sentido<=1;
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end
+				if(BolaPosicaoMaximaY-1>0)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY-1;
+				end
+				if(BolaPosicaoMinimaY-1>0)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY-1;
+				end		
+	end
+	else if(BolaPosicaoMaximaX>=605 &&  BolaPosicaoMaximaX<615 && BolaPosicaoMaximaY<=Paleta2PosicaoMaximaY &&  BolaPosicaoMinimaY>=Paleta2PosicaoMinimaY)//Detect Collider paleta2,está dentro da paleta 2
+        begin
+		sentido<=6;
+		BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+		BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;		
+	end
+	else if(BolaPosicaoMaximaX>=605 &&  BolaPosicaoMaximaX<615 && BolaPosicaoMaximaY>=Paleta2PosicaoMinimaY &&  BolaPosicaoMaximaY<=Paleta2PosicaoMaximaY)//Detect Collider paleta2, bateu na quina superior
+        begin
+		if(aleatorio<6)//7
+		begin
+			sentido<=7;
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+				if(BolaPosicaoMaximaY-1>0)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY-1;
+				end
+				if(BolaPosicaoMinimaY-1>0)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY-1;
+				end	
+		end		
+	     else if(aleatorio<10)//6
+		begin
+			sentido<=6;
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+		end
+	    else//5
+		begin
+			sentido<=5;
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+				if(BolaPosicaoMaximaY+1<480)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY+1;
+				end
+				if(BolaPosicaoMinimaY+1<480)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY+1;
+				end	
+		
+		end
+	end
+	else if(BolaPosicaoMaximaX>=605 &&  BolaPosicaoMaximaX<615 && BolaPosicaoMinimaY>=Paleta2PosicaoMinimaY &&  BolaPosicaoMinimaY<=Paleta2PosicaoMaximaY)//Detect Collider paleta2,bateu na quina inferior
+        begin
+		if(aleatorio<6)//7
+		begin
+			sentido<=7;
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+				if(BolaPosicaoMaximaY-1>0)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY-1;
+				end
+				if(BolaPosicaoMinimaY-1>0)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY-1;
+				end	
+		end		
+	     else if(aleatorio<10)//6
+		begin
+			sentido<=6;
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+		end
+	    else//5
+		begin
+			sentido<=5;
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+				if(BolaPosicaoMaximaY+1<480)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY+1;
+				end
+				if(BolaPosicaoMinimaY+1<480)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY+1;
+				end	
+		
+		end
+	end	
+	else if(BolaPosicaoMaximaX>15 &&  BolaPosicaoMaximaX<=35 && BolaPosicaoMaximaY<=Paleta1PosicaoMaximaY &&  BolaPosicaoMinimaY>=Paleta1PosicaoMinimaY)//Detect Collider paleta1,está dentro paleta1
+        begin
+		sentido<=2;
+		BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+		BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+	end
+	else if(BolaPosicaoMaximaX>15 &&  BolaPosicaoMaximaX<=35 && BolaPosicaoMaximaY>=Paleta1PosicaoMinimaY &&  BolaPosicaoMaximaY<=Paleta1PosicaoMaximaY)//Detect Collider paleta1,bateu na quina superior
+        begin
+		if(aleatorio<6)//1
+		begin
+			sentido<=1;
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end
+				if(BolaPosicaoMaximaY-1>0)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY-1;
+				end
+				if(BolaPosicaoMinimaY-1>0)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY-1;
+				end		
+		end		
+	     else if(aleatorio<10)//2
+		begin
+			sentido<=2;
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end	
+		end
+	    else//3
+		begin
+			sentido<=3;
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end
+				if(BolaPosicaoMaximaY+1<480)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY+1;
+				end
+				if(BolaPosicaoMinimaY+1<480)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY+1;
+				end
+		
+		end
+	end
+	else if(BolaPosicaoMaximaX>15 &&  BolaPosicaoMaximaX<=35 && BolaPosicaoMinimaY>=Paleta1PosicaoMinimaY &&  BolaPosicaoMinimaY<=Paleta1PosicaoMaximaY)//Detect Collider paleta1,bateu na quina inferior
+        begin
+		if(aleatorio<6)//1
+		begin
+			sentido<=1;
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end
+				if(BolaPosicaoMaximaY-1>0)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY-1;
+				end
+				if(BolaPosicaoMinimaY-1>0)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY-1;
+				end		
+		end		
+	     else if(aleatorio<10)//2
+		begin
+			sentido<=2;
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end	
+		end
+	    else//3
+		begin
+			sentido<=3;
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end
+				if(BolaPosicaoMaximaY+1<480)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY+1;
+				end
+				if(BolaPosicaoMinimaY+1<480)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY+1;
+				end
+		
+		end
+	end
+	else if(BolaPosicaoMaximaX>35 &&  BolaPosicaoMaximaX<605 && BolaPosicaoMinimaY<=5)//Detect Collider Parede Cima
+        begin
+	     if(aleatorio<6)//5
+		begin
+			sentido<=5;
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+				if(BolaPosicaoMaximaY+1<480)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY+1;
+				end
+				if(BolaPosicaoMinimaY+1<480)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY+1;
+				end	
+		end		
+	     else if(aleatorio<10)//4
+		begin
+			sentido<=4;
+				if(BolaPosicaoMaximaY+1<480)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY+1;
+				end
+				if(BolaPosicaoMinimaY+1<480)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY+1;
+				end	
+		end
+	    else//3
+		begin
+			sentido<=3;
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end
+				if(BolaPosicaoMaximaY+1<480)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY+1;
+				end
+				if(BolaPosicaoMinimaY+1<480)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY+1;
+				end	
+		
+		end			
+	end
+	else if(BolaPosicaoMaximaX>35 &&  BolaPosicaoMaximaX<605 && BolaPosicaoMaximaY>=475)//Detect Collider Parede Baixo
+        begin
+		if(aleatorio<6)//8
+		begin
+			sentido<=8;
+				if(BolaPosicaoMaximaY-1>0)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY-1;
+				end
+				if(BolaPosicaoMinimaY-1>0)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY-1;
+				end	
+		end		
+	     else if(aleatorio<10)//7
+		begin
+			sentido<=7;
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+				if(BolaPosicaoMaximaY-1>0)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY-1;
+				end
+				if(BolaPosicaoMinimaY-1>0)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY-1;
+				end	
+		end
+	    else//1
+		begin
+			sentido<=1;
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end
+				if(BolaPosicaoMaximaY-1>0)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY-1;
+				end
+				if(BolaPosicaoMinimaY-1>0)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY-1;
+				end				
+		
+		end	
+	end		
+	else //Mover
+	begin
+		case(sentido)
+		1:
+			begin
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end
+				if(BolaPosicaoMaximaY-1>0)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY-1;
+				end
+				if(BolaPosicaoMinimaY-1>0)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY-1;
+				end								
+			end
+		2:
+			begin
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end				
+			end
+		3:
+			begin
+				if(BolaPosicaoMaximaX+1<640)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX+1;
+				end
+				if(BolaPosicaoMinimaX+1<640)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX+1;
+				end
+				if(BolaPosicaoMaximaY+1<480)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY+1;
+				end
+				if(BolaPosicaoMinimaY+1<480)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY+1;
+				end	
+
+			end
+		4:
+			begin
+				if(BolaPosicaoMaximaY+1<480)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY+1;
+				end
+				if(BolaPosicaoMinimaY+1<480)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY+1;
+				end	
+			end
+		5:
+			begin
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+				if(BolaPosicaoMaximaY+1<480)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY+1;
+				end
+				if(BolaPosicaoMinimaY+1<480)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY+1;
+				end	
+
+			end
+		6:
+			begin
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+			end
+		7:
+			begin
+				if(BolaPosicaoMaximaX-1>0)
+				begin
+					BolaPosicaoMaximaX<=BolaPosicaoMaximaX-1;
+				end
+				if(BolaPosicaoMinimaX-1>0)
+				begin
+					BolaPosicaoMinimaX<=BolaPosicaoMinimaX-1;
+				end
+				if(BolaPosicaoMaximaY-1>0)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY-1;
+				end
+				if(BolaPosicaoMinimaY-1>0)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY-1;
+				end								
+			end
+		8:
+			begin
+				if(BolaPosicaoMaximaY-1>0)
+				begin
+					BolaPosicaoMaximaY<=BolaPosicaoMaximaY-1;
+				end
+				if(BolaPosicaoMinimaY-1>0)
+				begin
+					BolaPosicaoMinimaY<=BolaPosicaoMinimaY-1;
+				end	
+			end
+		endcase	
+	end
+
+
+
+
+
+
+end
+
+
+
+
+always@(posedge clock)
+begin
+	if(horizontalcontador==799)//799 se nao funcionar
+	begin
+		horizontalcontador<= 0;					
+		if(verticalcontador == 524)
+			verticalcontador <= 0;
+		else 
+			verticalcontador <= verticalcontador+1'b1;					
+	end
+	else
+	begin
+		horizontalcontador<= horizontalcontador+1'b1;							
+	end
+end
+
+always @(posedge clock)
+begin
+	if((horizontalcontador>4 && horizontalcontador<36) && (verticalcontador>=Paleta1PosicaoMinimaY && verticalcontador<=Paleta1PosicaoMaximaY))	  
+		begin
+			R <= 1;
+			G<= 1; 
+			B <= 1;			
+		end
+	else if((horizontalcontador>604 && horizontalcontador<636) && (verticalcontador>=Paleta2PosicaoMinimaY && verticalcontador<=Paleta2PosicaoMaximaY))
+		begin
+			R <= 1;
+			G<= 1; 
+			B <= 1;			
+		end
+	else if((horizontalcontador>=BolaPosicaoMinimaX && horizontalcontador<=BolaPosicaoMaximaX)  && (verticalcontador>=BolaPosicaoMinimaY && verticalcontador<=BolaPosicaoMaximaY))
+		begin
+			R <= 1;
+			G<= 1; 
+			B <= 1;	
+		end
+	else
+		begin
+			R <= 0;
+			G<= 0; 
+			B <= 0;	
+		end
+
+	if(horizontalcontador>=656 && horizontalcontador<752)//Front Porch Horizontal e Vertical ativo
+		begin				
+			hsync<=0;				
+		end
+	else
+		begin				
+			hsync<=1;				
+		end
+			
+	if(verticalcontador>=490 && verticalcontador<492)//Front Porch Horizontal e Vertical ativo
+		begin				
+			vsync<=0;
+		end
+	else 
+		begin				
+			vsync<=1;
+		end	
+
+end
+
+
+
+
+endmodule 

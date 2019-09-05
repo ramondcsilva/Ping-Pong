@@ -1,0 +1,6 @@
+Info (10281): Verilog HDL Declaration information at VGA.v(17): object "palete1YM" differs only in case from object "palete1Ym" in the same scope
+Info (10281): Verilog HDL Declaration information at VGA.v(17): object "palete2YM" differs only in case from object "palete2Ym" in the same scope
+Info (10281): Verilog HDL Declaration information at Project3_id_router.sv(48): object "DEFAULT_WR_CHANNEL" differs only in case from object "default_wr_channel" in the same scope
+Info (10281): Verilog HDL Declaration information at Project3_id_router.sv(49): object "DEFAULT_RD_CHANNEL" differs only in case from object "default_rd_channel" in the same scope
+Info (10281): Verilog HDL Declaration information at Project3_addr_router.sv(48): object "DEFAULT_WR_CHANNEL" differs only in case from object "default_wr_channel" in the same scope
+Info (10281): Verilog HDL Declaration information at Project3_addr_router.sv(49): object "DEFAULT_RD_CHANNEL" differs only in case from object "default_rd_channel" in the same scope

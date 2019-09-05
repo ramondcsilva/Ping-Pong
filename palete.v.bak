@@ -1,0 +1,455 @@
+module palete(input Clock,input entrada[11:0], output reg[10:0] YM,output reg[10:0] Ym);
+
+
+always @ (posedge Clock)
+	begin	
+		if(entrada<=10)
+			begin
+			YM<=95;
+			Ym<=5;
+			end
+		else if(entrada<=20)
+			begin
+			YM<=96;
+			Ym<=6;
+			end
+		else if(entrada<=30)
+			begin
+			YM<=97;
+			Ym<=7;
+			end
+		else if(entrada<=40)
+			begin
+			YM<=98;
+			Ym<=8;
+			end
+		else if(entrada<=50)
+			begin
+			YM<=99;
+			Ym<=9;
+			end
+		else if(entrada<=60)
+			begin
+			YM<=100;
+			Ym<=10;
+			end
+		else if(entrada<=70)
+			begin
+			YM<=101;
+			Ym<=11;
+			end
+		else if(entrada<=80)
+			begin
+			YM<=102;
+			Ym<=12;
+			end
+		else if(entrada<=90)
+			begin
+			YM<=103;
+			Ym<=13;
+			end
+		else if(entrada<=100)
+			begin
+			YM<=104;
+			Ym<=14;
+			end
+		else if(entrada<=110)
+			begin
+			YM<=105;
+			Ym<=15;
+			end
+		else if(entrada<=120)
+			begin
+			YM<=106;
+			Ym<=16;
+			end
+		else if(entrada<=130)
+			begin
+			YM<=107;
+			Ym<=17;
+			end
+		else if(entrada<=140)
+			begin
+			YM<=108;
+			Ym<=18;
+			end
+		else if(entrada<=150)
+			begin
+			YM<=109;
+			Ym<=19;
+			end
+		else if(entrada<=160)
+			begin
+			YM<=110;
+			Ym<=20;
+			end
+		else if(entrada<=170)
+			begin
+			YM<=111;
+			Ym<=21;
+			end
+		else if(entrada<=180)
+			begin
+			YM<=112;
+			Ym<=22;
+			end	
+		else if(entrada<=190)
+			begin
+			YM<=113;
+			Ym<=23;
+			end
+		else if(entrada<=200)
+			begin
+			YM<=114;
+			Ym<=24;
+			end	
+		else if(entrada<=210)
+			begin
+			YM<=115;
+			Ym<=25;
+			end
+		else if(entrada<=220)
+			begin
+			YM<=116;
+			Ym<=26;
+			end
+		else if(entrada<=230)
+			begin
+			YM<=117;
+			Ym<=27;
+			end
+		else if(entrada<=240)
+			begin
+			YM<=118;
+			Ym<=28;
+			end
+		else if(entrada<=250)
+			begin
+			YM<=119;
+			Ym<=29;
+			end
+		else if(entrada<=260)
+			begin
+			YM<=120;
+			Ym<=30;
+			end
+	   else if(entrada<=270)
+			begin
+			YM<=121;
+			Ym<=31;
+			end
+		else if(entrada<=280)
+			begin
+			YM<=122;
+			Ym<=32;
+			end
+      else if(entrada<=290)
+			begin
+			YM<=123;
+			Ym<=33;
+			end
+		else if(entrada<=300)
+			begin
+			YM<=124;
+			Ym<=34;
+			end
+		else if(entrada<=310)
+			begin
+			YM<=125;
+			Ym<=35;
+			end
+		else if(entrada<=320)
+			begin
+			YM<=126;
+			Ym<=36;
+			end
+      else if(entrada<=330)
+			begin
+			YM<=127;
+			Ym<=37;
+			end
+		else if(entrada<=340)
+			begin
+			YM<=128;
+			Ym<=38;
+			end
+		else if(entrada<=350)
+			begin
+			YM<=129;
+			Ym<=39;
+			end
+		else if(entrada<=360)
+			begin
+			YM<=130;
+			Ym<=40;
+			end
+		else if(entrada<=370)
+			begin
+			YM<=131;
+			Ym<=41;
+			end
+		else if(entrada<=380)
+			begin
+			YM<=132;
+			Ym<=42;
+			end
+		else if(entrada<=390)
+			begin
+			YM<=133;
+			Ym<=43;
+			end
+		else if(entrada<=400)
+			begin
+			YM<=134;
+			Ym<=44;
+			end
+		else if(entrada<=410)
+			begin
+			YM<=135;
+			Ym<=45;
+			end
+		else if(entrada<=420)
+			begin
+			YM<=136;
+			Ym<=46;
+			end
+		else if(entrada<=430)
+			begin
+			YM<=137;
+			Ym<=47;
+			end
+		else if(entrada<=440)
+			begin
+			YM<=138;
+			Ym<=48;
+			end
+		else if(entrada<=450)
+			begin
+			YM<=139;
+			Ym<=49;
+			end
+		else if(entrada<=460)
+			begin
+			YM<=140;
+			Ym<=50;
+			end
+		else if(entrada<=470)
+			begin
+			YM<=141;
+			Ym<=51;
+			end
+		else if(entrada<=480)
+			begin
+			YM<=142;
+			Ym<=52;
+			end
+		else if(entrada<=490)
+			begin
+			YM<=143;
+			Ym<=53;
+			end
+		else if(entrada<=500)
+			begin
+			YM<=144;
+			Ym<=54;
+			end
+		else if(entrada<=510)
+			begin
+			YM<=145;
+			Ym<=55;
+			end
+		else if(entrada<=520)
+			begin
+			YM<=146;
+			Ym<=56;
+			end
+		else if(entrada<=530)
+			begin
+			YM<=147;
+			Ym<=57;
+			end
+		else if(entrada<=540)
+			begin
+			YM<=148;
+			Ym<=58;
+			end
+		else if(entrada<=550)
+			begin
+			YM<=149;
+			Ym<=59;
+			end
+		else if(entrada<=560)
+			begin
+			YM<=150;
+			Ym<=60;
+			end
+		else if(entrada<=570)
+			begin
+			YM<=151;
+			Ym<=61;
+			end
+		else if(entrada<=580)
+			begin
+			YM<=152;
+			Ym<=62;
+			end
+		else if(entrada<=590)
+			begin
+			YM<=153;
+			Ym<=63;
+			end
+		else if(entrada<=600)
+			begin
+			YM<=154;
+			Ym<=64;
+			end
+		else if(entrada<=610)
+			begin
+			YM<=155;
+			Ym<=65;
+			end
+		else if(entrada<=620)
+			begin
+			YM<=156;
+			Ym<=66;
+			end
+		else if(entrada<=630)
+			begin
+			YM<=157;
+			Ym<=67;
+			end
+		else if(entrada<=640)
+			begin
+			YM<=158;
+			Ym<=68;
+			end
+		else if(entrada<=650)
+			begin
+			YM<=159;
+			Ym<=69;
+			end
+		else if(entrada<=660)
+			begin
+			YM<=160;
+			Ym<=70;
+			end
+		else if(entrada<=670)//aqui
+			begin
+			YM<=161;
+			Ym<=71;
+			end
+		else if(entrada<=680)
+			begin
+			YM<=162;
+			Ym<=72;
+			end
+		else if(entrada<=690)
+			begin
+			YM<=163;
+			Ym<=73;
+			end
+		else if(entrada<=700)
+			begin
+			YM<=164;
+			Ym<=74;
+			end
+		else if(entrada<=710)
+			begin
+			YM<=165;
+			Ym<=75;
+			end
+		else if(entrada<=720)
+			begin
+			YM<=166;
+			Ym<=76;
+			end
+		else if(entrada<=730)
+			begin
+			YM<=167;
+			Ym<=77;
+			end
+		else if(entrada<=740)
+			begin
+			YM<=168;
+			Ym<=78;
+			end
+		else if(entrada<=750)
+			begin
+			YM<=169;
+			Ym<=79;
+			end
+		else if(entrada<=760)
+			begin
+			YM<=170;
+			Ym<=80;
+			end
+		else if(entrada<=770)
+			begin
+			YM<=171;
+			Ym<=81;
+			end		
+		else if(entrada<=780)//aqui
+			begin
+			YM<=172;
+			Ym<=82;
+			end
+		else if(entrada<=790)
+			begin
+			YM<=173;
+			Ym<=83;
+			end
+		else if(entrada<=800)
+			begin
+			YM<=174;
+			Ym<=84;
+			end
+		else if(entrada<=810)
+			begin
+			YM<=175;
+			Ym<=85;
+			end
+		else if(entrada<=820)
+			begin
+			YM<=176;
+			Ym<=86;
+			end
+		else if(entrada<=830)
+			begin
+			YM<=177;
+			Ym<=87;
+			end
+		else if(entrada<=840)
+			begin
+			YM<=178;
+			Ym<=88;
+			end
+		else if(entrada<=850)
+			begin
+			YM<=179;
+			Ym<=89;
+			end
+		else if(entrada<=860)
+			begin
+			YM<=180;
+			Ym<=90;
+			end
+		else if(entrada<=870)
+			begin
+			YM<=181;
+			Ym<=91;
+			end
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			
+	end
+
+
+
+endmodule

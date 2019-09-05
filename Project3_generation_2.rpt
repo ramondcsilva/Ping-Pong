@@ -1,0 +1,215 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory="C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/" --output-directory="C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/Project3/" --report-file="bsf:C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/Project3.bsf" --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE30F23C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file="C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/Project3.qsys"
+Progress: Loading Ping-Pong/Project3.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding onchip_memory [altera_avalon_onchip_memory2 13.0.1.99.2]
+Progress: Parameterizing module onchip_memory
+Progress: Adding nios2 [altera_nios2_qsys 13.0]
+Progress: Parameterizing module nios2
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart
+Progress: Adding Potenciometro1 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module Potenciometro1
+Progress: Adding Potenciometro2 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module Potenciometro2
+Progress: Adding lcd_0 [lcd 1.0]
+Progress: Parameterizing module lcd_0
+Progress: Adding Ponto1 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module Ponto1
+Progress: Adding Ponto2 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module Ponto2
+Progress: Adding rstgame [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module rstgame
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Project3.Potenciometro1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Project3.Potenciometro2: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Project3.Ponto1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Project3.Ponto2: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Project3.rstgame: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory="C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/" --output-directory="C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/Project3/synthesis/" --file-set=QUARTUS_SYNTH --report-file="sopcinfo:C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/Project3.sopcinfo" --report-file="html:C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/Project3.html" --report-file="qip:C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/Project3/synthesis/Project3.qip" --report-file="cmp:C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/Project3.cmp" --report-file=svd --system-info=DEVICE_FAMILY="Cyclone IV E" --system-info=DEVICE=EP4CE30F23C7 --system-info=DEVICE_SPEEDGRADE=7 --component-file="C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/Project3.qsys" --language=VERILOG
+Progress: Loading Ping-Pong/Project3.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.0]
+Progress: Parameterizing module clk_0
+Progress: Adding onchip_memory [altera_avalon_onchip_memory2 13.0.1.99.2]
+Progress: Parameterizing module onchip_memory
+Progress: Adding nios2 [altera_nios2_qsys 13.0]
+Progress: Parameterizing module nios2
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart
+Progress: Adding Potenciometro1 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module Potenciometro1
+Progress: Adding Potenciometro2 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module Potenciometro2
+Progress: Adding lcd_0 [lcd 1.0]
+Progress: Parameterizing module lcd_0
+Progress: Adding Ponto1 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module Ponto1
+Progress: Adding Ponto2 [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module Ponto2
+Progress: Adding rstgame [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module rstgame
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Project3.Potenciometro1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Project3.Potenciometro2: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Project3.Ponto1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Project3.Ponto2: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Project3.rstgame: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Project3: Generating Project3 "Project3" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 10 modules, 35 connections
+Info: merlin_custom_instruction_transform: After transform: 13 modules, 38 connections
+Info: merlin_translator_transform: After transform: 23 modules, 68 connections
+Info: merlin_domain_transform: After transform: 42 modules, 162 connections
+Info: merlin_router_transform: After transform: 52 modules, 192 connections
+Info: merlin_traffic_limiter_transform: After transform: 53 modules, 196 connections
+Info: reset_adaptation_transform: After transform: 54 modules, 198 connections
+Info: merlin_network_to_switch_transform: After transform: 73 modules, 250 connections
+Info: limiter_update_transform: After transform: 73 modules, 251 connections
+Info: merlin_mm_transform: After transform: 73 modules, 251 connections
+Info: merlin_interrupt_mapper_transform: After transform: 74 modules, 254 connections
+Warning: Project3: "No matching role found for nios2_custom_instruction_master_translator:ci_slave:ci_slave_result (result)"
+Warning: Project3: "No matching role found for nios2_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning: Project3: "No matching role found for nios2_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Warning: Project3: "No matching role found for rst_controller:reset_out:reset_req (reset_req)"
+Info: onchip_memory: Starting RTL generation for module 'Project3_onchip_memory'
+Info: onchip_memory:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Project3_onchip_memory --dir=C:/Users/RAMONS~1/AppData/Local/Temp/alt8144_213308504471502451.dir/0001_onchip_memory_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/RAMONS~1/AppData/Local/Temp/alt8144_213308504471502451.dir/0001_onchip_memory_gen//Project3_onchip_memory_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory: Done RTL generation for module 'Project3_onchip_memory'
+Info: onchip_memory: "Project3" instantiated altera_avalon_onchip_memory2 "onchip_memory"
+Info: nios2: Starting RTL generation for module 'Project3_nios2'
+Info: nios2:   Generation command is [exec C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/13.0sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=Project3_nios2 --dir=C:/Users/RAMONS~1/AppData/Local/Temp/alt8144_213308504471502451.dir/0002_nios2_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/RAMONS~1/AppData/Local/Temp/alt8144_213308504471502451.dir/0002_nios2_gen//Project3_nios2_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+Info: nios2: # 2019.09.05 15:07:59 (*) Starting Nios II generation
+Info: nios2: # 2019.09.05 15:07:59 (*)   Checking for plaintext license.
+Info: nios2: # 2019.09.05 15:08:00 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus
+Info: nios2: # 2019.09.05 15:08:00 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: nios2: # 2019.09.05 15:08:00 (*)   LM_LICENSE_FILE environment variable is empty
+Info: nios2: # 2019.09.05 15:08:00 (*)   Plaintext license not found.
+Info: nios2: # 2019.09.05 15:08:00 (*)   Checking for encrypted license (non-evaluation).
+Info: nios2: # 2019.09.05 15:08:00 (*)   Couldn't query license setup in Quartus directory C:/altera/13.0sp1/quartus
+Info: nios2: # 2019.09.05 15:08:00 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: nios2: # 2019.09.05 15:08:00 (*)   LM_LICENSE_FILE environment variable is empty
+Info: nios2: # 2019.09.05 15:08:00 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: nios2: # 2019.09.05 15:08:00 (*)   Elaborating CPU configuration settings
+Info: nios2: # 2019.09.05 15:08:00 (*)   Creating all objects for CPU
+Info: nios2: # 2019.09.05 15:08:01 (*)     Pipeline frontend
+Info: nios2: # 2019.09.05 15:08:03 (*)   Generating RTL from CPU objects
+Info: nios2: # 2019.09.05 15:08:06 (*)   Creating encrypted RTL
+Info: nios2: # 2019.09.05 15:08:07 (*) Done Nios II generation
+Info: nios2: Done RTL generation for module 'Project3_nios2'
+Info: nios2: "Project3" instantiated altera_nios2_qsys "nios2"
+Info: jtag_uart: Starting RTL generation for module 'Project3_jtag_uart'
+Info: jtag_uart:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=Project3_jtag_uart --dir=C:/Users/RAMONS~1/AppData/Local/Temp/alt8144_213308504471502451.dir/0003_jtag_uart_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/RAMONS~1/AppData/Local/Temp/alt8144_213308504471502451.dir/0003_jtag_uart_gen//Project3_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart: Done RTL generation for module 'Project3_jtag_uart'
+Info: jtag_uart: "Project3" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: Potenciometro1: Starting RTL generation for module 'Project3_Potenciometro1'
+Info: Potenciometro1:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Project3_Potenciometro1 --dir=C:/Users/RAMONS~1/AppData/Local/Temp/alt8144_213308504471502451.dir/0004_Potenciometro1_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/RAMONS~1/AppData/Local/Temp/alt8144_213308504471502451.dir/0004_Potenciometro1_gen//Project3_Potenciometro1_component_configuration.pl  --do_build_sim=0  ]
+Info: Potenciometro1: Done RTL generation for module 'Project3_Potenciometro1'
+Info: Potenciometro1: "Project3" instantiated altera_avalon_pio "Potenciometro1"
+Info: lcd_0: "Project3" instantiated lcd "lcd_0"
+Info: Ponto1: Starting RTL generation for module 'Project3_Ponto1'
+Info: Ponto1:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Project3_Ponto1 --dir=C:/Users/RAMONS~1/AppData/Local/Temp/alt8144_213308504471502451.dir/0006_Ponto1_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/RAMONS~1/AppData/Local/Temp/alt8144_213308504471502451.dir/0006_Ponto1_gen//Project3_Ponto1_component_configuration.pl  --do_build_sim=0  ]
+Info: Ponto1: Done RTL generation for module 'Project3_Ponto1'
+Info: Ponto1: "Project3" instantiated altera_avalon_pio "Ponto1"
+Info: rstgame: Starting RTL generation for module 'Project3_rstgame'
+Info: rstgame:   Generation command is [exec C:/altera/13.0sp1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.0sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/13.0sp1/quartus/sopc_builder/bin/europa -I C:/altera/13.0sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.0sp1/quartus/sopc_builder/bin -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/13.0sp1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Project3_rstgame --dir=C:/Users/RAMONS~1/AppData/Local/Temp/alt8144_213308504471502451.dir/0007_rstgame_gen/ --quartus_dir=C:/altera/13.0sp1/quartus --verilog --config=C:/Users/RAMONS~1/AppData/Local/Temp/alt8144_213308504471502451.dir/0007_rstgame_gen//Project3_rstgame_component_configuration.pl  --do_build_sim=0  ]
+Info: rstgame: Done RTL generation for module 'Project3_rstgame'
+Info: rstgame: "Project3" instantiated altera_avalon_pio "rstgame"
+Info: nios2_custom_instruction_master_translator: "Project3" instantiated altera_customins_master_translator "nios2_custom_instruction_master_translator"
+Info: nios2_custom_instruction_master_multi_xconnect: "Project3" instantiated altera_customins_xconnect "nios2_custom_instruction_master_multi_xconnect"
+Info: nios2_custom_instruction_master_multi_slave_translator0: "Project3" instantiated altera_customins_slave_translator "nios2_custom_instruction_master_multi_slave_translator0"
+Info: nios2_instruction_master_translator: "Project3" instantiated altera_merlin_master_translator "nios2_instruction_master_translator"
+Info: nios2_jtag_debug_module_translator: "Project3" instantiated altera_merlin_slave_translator "nios2_jtag_debug_module_translator"
+Info: nios2_instruction_master_translator_avalon_universal_master_0_agent: "Project3" instantiated altera_merlin_master_agent "nios2_instruction_master_translator_avalon_universal_master_0_agent"
+Info: nios2_jtag_debug_module_translator_avalon_universal_slave_0_agent: "Project3" instantiated altera_merlin_slave_agent "nios2_jtag_debug_module_translator_avalon_universal_slave_0_agent"
+Info: nios2_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo: "Project3" instantiated altera_avalon_sc_fifo "nios2_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo"
+Info: addr_router: "Project3" instantiated altera_merlin_router "addr_router"
+Info: id_router: "Project3" instantiated altera_merlin_router "id_router"
+Info: limiter: "Project3" instantiated altera_merlin_traffic_limiter "limiter"
+Info: rst_controller: "Project3" instantiated altera_reset_controller "rst_controller"
+Info: cmd_xbar_demux: "Project3" instantiated altera_merlin_demultiplexer "cmd_xbar_demux"
+Info: cmd_xbar_demux_001: "Project3" instantiated altera_merlin_demultiplexer "cmd_xbar_demux_001"
+Info: cmd_xbar_mux: "Project3" instantiated altera_merlin_multiplexer "cmd_xbar_mux"
+Info: rsp_xbar_demux: "Project3" instantiated altera_merlin_demultiplexer "rsp_xbar_demux"
+Info: rsp_xbar_mux: "Project3" instantiated altera_merlin_multiplexer "rsp_xbar_mux"
+Info: Reusing file C:/Users/Ramon Silva/Documents/GitHub/Ping-Pong/Project3/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: irq_mapper: "Project3" instantiated altera_irq_mapper "irq_mapper"
+Info: Project3: Done Project3" with 26 modules, 107 files, 2008764 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
