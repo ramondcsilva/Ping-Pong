@@ -1,2 +1,2 @@
 # Ping-Pong
- Thirty problem IM Digital Sistems
+ Thirty problem of the IM Digital Systems
