@@ -113,35 +113,11 @@
          type = "int";
       }
    }
-   element rstgame.s1
-   {
-      datum baseAddress
-      {
-         value = "2128";
-         type = "String";
-      }
-   }
-   element Ponto1.s1
-   {
-      datum baseAddress
-      {
-         value = "2144";
-         type = "String";
-      }
-   }
    element Potenciometro2.s1
    {
       datum baseAddress
       {
          value = "2192";
-         type = "String";
-      }
-   }
-   element onchip_memory.s1
-   {
-      datum baseAddress
-      {
-         value = "8192";
          type = "String";
       }
    }
@@ -166,6 +142,30 @@
          type = "String";
       }
    }
+   element Ponto1.s1
+   {
+      datum baseAddress
+      {
+         value = "2144";
+         type = "String";
+      }
+   }
+   element rstgame.s1
+   {
+      datum baseAddress
+      {
+         value = "2128";
+         type = "String";
+      }
+   }
+   element onchip_memory.s1
+   {
+      datum baseAddress
+      {
+         value = "8192";
+         type = "String";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -181,20 +181,10 @@
  <parameter name="projectName" value="Project3.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1567706677166" />
+ <parameter name="timeStamp" value="1567980188352" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
- <interface
-   name="potenciometro1"
-   internal="Potenciometro1.external_connection"
-   type="conduit"
-   dir="end" />
- <interface
-   name="potenciometro2"
-   internal="Potenciometro2.external_connection"
-   type="conduit"
-   dir="end" />
  <interface name="lcd" internal="lcd_0.conduit_end" type="conduit" dir="end" />
  <interface
    name="ponto1"
@@ -209,6 +199,16 @@
  <interface
    name="rstgame"
    internal="rstgame.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="potenciometro1"
+   internal="Potenciometro1.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="potenciometro2"
+   internal="Potenciometro2.external_connection"
    type="conduit"
    dir="end" />
  <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
@@ -378,42 +378,6 @@
   <parameter name="writeIRQThreshold" value="8" />
   <parameter name="avalonSpec" value="2.0" />
  </module>
- <module
-   kind="altera_avalon_pio"
-   version="13.0.1.99.2"
-   enabled="1"
-   name="Potenciometro1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="direction" value="Input" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="8" />
-  <parameter name="clockRate" value="50000000" />
- </module>
- <module
-   kind="altera_avalon_pio"
-   version="13.0.1.99.2"
-   enabled="1"
-   name="Potenciometro2">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="direction" value="Input" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="8" />
-  <parameter name="clockRate" value="50000000" />
- </module>
  <module kind="lcd" version="1.0" enabled="1" name="lcd_0" />
  <module
    kind="altera_avalon_pio"
@@ -467,6 +431,42 @@
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="1" />
+  <parameter name="clockRate" value="50000000" />
+ </module>
+ <module
+   kind="altera_avalon_pio"
+   version="13.0.1.99.2"
+   enabled="1"
+   name="Potenciometro1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="8" />
+  <parameter name="clockRate" value="50000000" />
+ </module>
+ <module
+   kind="altera_avalon_pio"
+   version="13.0.1.99.2"
+   enabled="1"
+   name="Potenciometro2">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="8" />
   <parameter name="clockRate" value="50000000" />
  </module>
  <connection
@@ -553,62 +553,6 @@
   <parameter name="irqNumber" value="0" />
  </connection>
  <connection
-   kind="avalon"
-   version="13.0"
-   start="nios2.instruction_master"
-   end="Potenciometro2.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0890" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
-   end="Potenciometro2.reset" />
- <connection
-   kind="clock"
-   version="13.0"
-   start="clk_0.clk"
-   end="Potenciometro2.clk" />
- <connection
-   kind="clock"
-   version="13.0"
-   start="clk_0.clk"
-   end="Potenciometro1.clk" />
- <connection
-   kind="avalon"
-   version="13.0"
-   start="nios2.data_master"
-   end="Potenciometro2.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0890" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="nios2.instruction_master"
-   end="Potenciometro1.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0880" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="13.0"
-   start="nios2.data_master"
-   end="Potenciometro1.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0880" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="reset"
-   version="13.0"
-   start="clk_0.clk_reset"
-   end="Potenciometro1.reset" />
- <connection
    kind="reset"
    version="13.0"
    start="nios2.jtag_debug_module_reset"
@@ -694,6 +638,62 @@
    version="13.0"
    start="clk_0.clk_reset"
    end="rstgame.reset" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="clk_0.clk"
+   end="Potenciometro1.clk" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="nios2.instruction_master"
+   end="Potenciometro1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0880" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="nios2.data_master"
+   end="Potenciometro1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0880" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="Potenciometro1.reset" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="nios2.instruction_master"
+   end="Potenciometro2.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0890" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="Potenciometro2.reset" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="clk_0.clk"
+   end="Potenciometro2.clk" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="nios2.data_master"
+   end="Potenciometro2.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0890" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

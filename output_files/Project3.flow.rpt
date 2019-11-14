@@ -1,5 +1,5 @@
 Flow report for Project3
-Thu Sep 05 16:40:38 2019
+Tue Sep 10 14:58:50 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Sep 05 16:40:29 2019           ;
+; Flow Status                        ; Successful - Tue Sep 10 14:58:38 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Project3                                        ;
 ; Top-level Entity Name              ; Pong                                            ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE30F23C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 6,361 / 28,848 ( 22 % )                         ;
-;     Total combinational functions  ; 5,894 / 28,848 ( 20 % )                         ;
-;     Dedicated logic registers      ; 2,751 / 28,848 ( 10 % )                         ;
-; Total registers                    ; 2751                                            ;
+; Total logic elements               ; 6,369 / 28,848 ( 22 % )                         ;
+;     Total combinational functions  ; 5,905 / 28,848 ( 20 % )                         ;
+;     Dedicated logic registers      ; 2,776 / 28,848 ( 10 % )                         ;
+; Total registers                    ; 2776                                            ;
 ; Total pins                         ; 40 / 329 ( 12 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 82,176 / 608,256 ( 14 % )                       ;
+; Total memory bits                  ; 83,200 / 608,256 ( 14 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 4 / 132 ( 3 % )                                 ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/05/2019 16:38:47 ;
+; Start date & time ; 09/10/2019 14:56:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Project3            ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------------+---------------------------------------------------------+------------------+
 ; Assignment Name                     ; Value                                                                                                                    ; Default Value ; Entity Name                                             ; Section Id       ;
 +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------------+---------------------------------------------------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 167690714103691.156771232606976                                                                                          ; --            ; --                                                      ; --               ;
+; COMPILER_SIGNATURE_ID               ; 167690714103691.156813816305812                                                                                          ; --            ; --                                                      ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                                                                       ; --            ; --                                                      ; --               ;
 ; IP_TOOL_ENV                         ; Qsys                                                                                                                     ; --            ; --                                                      ; --               ;
 ; IP_TOOL_ENV                         ; Qsys                                                                                                                     ; --            ; Project3_Ponto1                                         ; --               ;
@@ -183,11 +183,11 @@ applicable agreement for further details.
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ENABLE_ADVANCED_TRIGGER=1                                                                                            ; --            ; --                                                      ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_POWER_UP_TRIGGER=1                                                                                                   ; --            ; --                                                      ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=000000001100011101111111                                                                              ; --            ; --                                                      ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=4                                                                                                          ; --            ; --                                                      ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=4                                                                                                       ; --            ; --                                                      ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_LOWORD=33156                                                                                                ; --            ; --                                                      ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_HIWORD=25909                                                                                                ; --            ; --                                                      ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_Project3_auto_signaltap_0_1_8d41,sld_reserved_Project3_auto_signaltap_0_2_8d41, ; --            ; --                                                      ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=5                                                                                                          ; --            ; --                                                      ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=5                                                                                                       ; --            ; --                                                      ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_LOWORD=39279                                                                                                ; --            ; --                                                      ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_HIWORD=62520                                                                                                ; --            ; --                                                      ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_Project3_auto_signaltap_0_1_df8a,sld_reserved_Project3_auto_signaltap_0_2_df8a, ; --            ; --                                                      ; auto_signaltap_0 ;
 ; SOPCINFO_FILE                       ; Project3/synthesis/../../Project3.sopcinfo                                                                               ; --            ; --                                                      ; --               ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                                                                                       ; --            ; --                                                      ; --               ;
 ; TOP_LEVEL_ENTITY                    ; Pong                                                                                                                     ; Project3      ; --                                                      ; --               ;
@@ -200,11 +200,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:00     ; 1.0                     ; 4791 MB             ; 00:00:56                           ;
-; Fitter                    ; 00:00:30     ; 1.2                     ; 5238 MB             ; 00:00:32                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4595 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:08     ; 1.1                     ; 4763 MB             ; 00:00:07                           ;
-; Total                     ; 00:01:42     ; --                      ; --                  ; 00:01:38                           ;
+; Analysis & Synthesis      ; 00:01:35     ; 1.0                     ; 4795 MB             ; 00:01:33                           ;
+; Fitter                    ; 00:00:43     ; 1.2                     ; 5245 MB             ; 00:00:47                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 4599 MB             ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:11     ; 1.1                     ; 4751 MB             ; 00:00:10                           ;
+; Total                     ; 00:02:34     ; --                      ; --                  ; 00:02:35                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -4,7 +4,7 @@ initial contador=0;
 
 always @(posedge clock)
 begin
-	if(contador==1000000)
+	if(contador==100000)
 	begin
 		saida<=1;
 		contador<=0;

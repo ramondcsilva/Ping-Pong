@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="aa4d2b9a70ebaf38a5e3"/>
+    <hash md5_digest_80b="25d8926c7349eeddd048"/>
   </project>
   <file_info>
     <file device="EP4CE30F23C7" path="Project3_time_limited.sof" usercode="0xFFFFFFFF"/>
@@ -148,11 +148,11 @@
         <parameter name="SLD_IP_VERSION" type="dec" value="6"/>
         <parameter name="SLD_IP_MINOR_VERSION" type="dec" value="0"/>
         <parameter name="SLD_COMMON_IP_VERSION" type="dec" value="0"/>
-        <parameter name="sld_data_bits" type="unknown" value="4"/>
-        <parameter name="sld_trigger_bits" type="unknown" value="4"/>
+        <parameter name="sld_data_bits" type="unknown" value="5"/>
+        <parameter name="sld_trigger_bits" type="unknown" value="5"/>
         <parameter name="SLD_NODE_CRC_BITS" type="dec" value="32"/>
-        <parameter name="sld_node_crc_hiword" type="unknown" value="25909"/>
-        <parameter name="sld_node_crc_loword" type="unknown" value="33156"/>
+        <parameter name="sld_node_crc_hiword" type="unknown" value="62520"/>
+        <parameter name="sld_node_crc_loword" type="unknown" value="39279"/>
         <parameter name="SLD_INCREMENTAL_ROUTING" type="dec" value="0"/>
         <parameter name="sld_sample_depth" type="unknown" value="1024"/>
         <parameter name="sld_segment_size" type="unknown" value="1024"/>
@@ -167,7 +167,7 @@
         <parameter name="SLD_HPS_TRIGGER_OUT_ENABLED" type="dec" value="0"/>
         <parameter name="SLD_HPS_EVENT_ENABLED" type="dec" value="0"/>
         <parameter name="SLD_HPS_EVENT_ID" type="dec" value="0"/>
-        <parameter name="sld_advanced_trigger_entity" type="unknown" value="sld_reserved_Project3_auto_signaltap_0_1_8d41,sld_reserved_Project3_auto_signaltap_0_2_8d41,"/>
+        <parameter name="sld_advanced_trigger_entity" type="unknown" value="sld_reserved_Project3_auto_signaltap_0_1_df8a,sld_reserved_Project3_auto_signaltap_0_2_df8a,"/>
         <parameter name="sld_trigger_level_pipeline" type="unknown" value="1"/>
         <parameter name="sld_enable_advanced_trigger" type="unknown" value="1"/>
         <parameter name="SLD_ADVANCED_TRIGGER_1" type="string" value="NONE"/>

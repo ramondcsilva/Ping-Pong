@@ -84,15 +84,6 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_T
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000001100011101111111" -section_id auto_signaltap_0
 set_instance_assignment -name CONNECT_PIN_TO_SLD_NODE_ENTITY_PORT acq_clk -to auto_stp_external_clock_0 -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "ADMAX1379:conversor|ADC_CNVST" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "ADMAX1379:conversor|ADC_SCLK" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "ADMAX1379:conversor|ADC_CNVST" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "ADMAX1379:conversor|ADC_SCLK" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=4" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=4" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=33156" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=25909" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_Project3_auto_signaltap_0_1_8d41,sld_reserved_Project3_auto_signaltap_0_2_8d41," -section_id auto_signaltap_0
 set_global_assignment -name VERILOG_FILE Velocidade9.v
 set_global_assignment -name VERILOG_FILE Velocidade8.v
 set_global_assignment -name VERILOG_FILE Velocidade7.v
@@ -125,10 +116,8 @@ set_global_assignment -name VERILOG_FILE ContadorRegressivoProgressivo2.v
 set_global_assignment -name VERILOG_FILE ContadorRegressivoProgressivo.v
 set_global_assignment -name VERILOG_FILE contador.v
 set_global_assignment -name VERILOG_FILE constanteDados.v
-set_global_assignment -name VERILOG_FILE AD.v
 set_global_assignment -name QIP_FILE Project3/synthesis/Project3.qip
 set_global_assignment -name VERILOG_FILE ADMAX1379.v
-set_global_assignment -name VERILOG_FILE Main.v
 set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
 set_global_assignment -name VERILOG_FILE db/ip/Project3/Project_3.v
 set_location_assignment PIN_T2 -to Clock
@@ -143,7 +132,6 @@ set_location_assignment PIN_V8 -to db[0]
 set_location_assignment PIN_V9 -to en
 set_location_assignment PIN_U9 -to rs
 set_location_assignment PIN_U8 -to rw
-set_location_assignment PIN_V10 -to bl
 set_location_assignment PIN_A17 -to vsync
 set_location_assignment PIN_B16 -to hsync
 set_location_assignment PIN_A9 -to R0
@@ -159,6 +147,17 @@ set_location_assignment PIN_A15 -to B1
 set_location_assignment PIN_B15 -to B2
 set_location_assignment PIN_A16 -to B3
 set_location_assignment PIN_V21 -to Reset
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "ADMAX1379:inst9|ADC_CNVST" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "ADMAX1379:inst9|ADC_SCLK" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to Clock -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "ADMAX1379:inst9|ADC_CNVST" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "ADMAX1379:inst9|ADC_SCLK" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to Clock -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=5" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=5" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=39279" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=62520" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_Project3_auto_signaltap_0_1_df8a,sld_reserved_Project3_auto_signaltap_0_2_df8a," -section_id auto_signaltap_0
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

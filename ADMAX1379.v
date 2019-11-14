@@ -36,7 +36,7 @@ module ADMAX1379(
 	assign ADC_UB     = 1'b0;
 	assign ADC_SEL    = 1'b0;
 	
-	reg [1:0] counter;
+	reg [9:0] counter;
 	reg [2:0] latencia;
 	reg [19:0] timing;
 	reg [11:0] data0;
@@ -50,14 +50,14 @@ module ADMAX1379(
 		if (!RESET_n) 
 			begin
 				ADC_SCLK    <= 1'b0;
-				counter 		<= 2'd3; 						//define o valor 4 ao contador
+				counter 		<= 9'd500; 						//define o valor 4 ao contador
 			end 
 		else 
 			begin
-				if (counter == 2'd0) 						//quando contador = 0, ele gera pulso para ADC_SCLK
+				if (counter == 9'd0) 						//quando contador = 0, ele gera pulso para ADC_SCLK
 					begin
 						ADC_SCLK <= ~ADC_SCLK;			//Gera a borda de descida
-						counter	<= 2'd3;
+						counter	<= 9'd500;
 					end
 				else 
 					begin

@@ -86,7 +86,7 @@ begin
 			BolaPosicaoMaximaY<=270;
 			BolaPosicaoMinimaY<=240;
 			BolaPosicaoMaximaX<=270;
-			BolaPosicaoMinimaX<=250;				
+			BolaPosicaoMinimaX<=240;				
 				if(aleatorio==0)
 				begin
 					sentido<=1;	
